@@ -47,7 +47,6 @@ body{
     grid-template-areas: "header header"
                         "nav  main"
                         "nav  main";
-    height: 100vh;                        
 }
 header{
     display: grid;
@@ -136,6 +135,7 @@ header figure{
     padding: 20px 40px 0;
     font-weight: 700;
     margin: 30px 0 0px 0;
+    display: block;
 }
 .movie{
     margin-top: 30px;
@@ -156,10 +156,12 @@ header figure{
     margin: 0;
     text-align: left;
     padding: 10px;
+    font-size: 1.3em;
 }
 .movie-overlay p{
     margin: 0 10px;
     text-align: justify;
+    font-size: 15px;
 }
 .movie-overlay{
     background-color: rgba(253,103,102,.72941);
@@ -176,6 +178,13 @@ header figure{
 }
 
 @media screen and (max-width: 768px){
+    .container{
+        display: grid;
+        grid-template: auto 1fr / 8% 1fr;
+        grid-template-areas: "header header"
+                            "main  main"
+                            "main  main";
+    }
     .container-movies{
         grid-area: main;
         display: grid;
@@ -183,7 +192,6 @@ header figure{
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         padding: 0 30px;
-    
     }
     .movie-overlay h2 {
         padding: 7px;
